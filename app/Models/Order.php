@@ -6,6 +6,7 @@ use App\Enums\OrderStatus;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
@@ -27,9 +28,9 @@ class Order extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function items(): HasMany
+    public function items(): BelongsToMany
     {
-        return $this->hasMany(OrderItem::class, 'order_id');
+        return $this->belongsToMany(Product::class, 'order_item', 'product_id', 'order_id');
     }
 
     public function payments(): HasMany
