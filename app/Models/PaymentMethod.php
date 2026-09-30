@@ -13,7 +13,7 @@ class PaymentMethod extends Model
 
     protected function casts(): array
     {
-        return 
+        return
         [
             'type' => PaymentType::class,
             'bank' => PaymentBank::class,

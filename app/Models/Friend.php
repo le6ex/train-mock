@@ -10,7 +10,7 @@ class Friend extends Model
 {
     protected function casts(): array
     {
-        return ['status' => FriendStatus::class,];
+        return ['status' => FriendStatus::class];
     }
 
     public function user(): BelongsTo

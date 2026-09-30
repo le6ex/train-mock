@@ -15,7 +15,7 @@ class Order extends Model
 
     protected function casts(): array
     {
-        return ['status' => OrderStatus::class,];
+        return ['status' => OrderStatus::class];
     }
 
     public function uniqueIds(): array

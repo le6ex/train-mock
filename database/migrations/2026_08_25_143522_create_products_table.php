@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->bigInteger('price');
             $table->timestamps();
-            $table->timestamp('deleted_at');
+            $table->softDeletes();
         });
     }
 

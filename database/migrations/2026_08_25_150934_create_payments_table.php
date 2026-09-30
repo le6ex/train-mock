@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('type_payment_id')->constrained('payment_methods');
             $table->bigInteger('amount');
             $table->timestamps();
-            });
+        });
     }
 
     /**

@@ -10,8 +10,9 @@ class Payment extends Model
 {
     protected function casts(): array
     {
-        return ['status' => PaymentStatus::class,];
+        return ['status' => PaymentStatus::class];
     }
+
     public function order(): BelongsTo
     {
         return $this->belongsTo(Order::class, 'order_id');

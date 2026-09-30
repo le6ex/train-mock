@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email', 255)->unique();
             $table->string('password', 255);
             $table->timestamps();
-            $table->timestamp('banned_at');
+            $table->timestamp('banned_at')->nullable();
         });
     }
 

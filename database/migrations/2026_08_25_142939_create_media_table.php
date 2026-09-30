@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger('size');
             $table->bigInteger('duration')->nullable();
             $table->bigInteger('width')->nullable();
-            $table->bigInteger('lenght')->nullable();
+            $table->bigInteger('length')->nullable();
             $table->text('url');
         });
     }

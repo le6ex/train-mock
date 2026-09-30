@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Profile extends Model
 {
     protected $table = 'profile';
-    
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');

@@ -12,7 +12,7 @@ class Media extends Model
 
     protected function casts(): array
     {
-        return ['type' => MediaType::class,];
+        return ['type' => MediaType::class];
     }
 
     public function post(): BelongsTo
