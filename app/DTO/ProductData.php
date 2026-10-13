@@ -3,6 +3,7 @@
 namespace App\DTO;
 
 use App\ValueObject\Money;
+use Illuminate\Support\Arr;
 
 final readonly class ProductData
 {
@@ -15,9 +16,9 @@ final readonly class ProductData
     public static function fromArray(array $data): self
     {
         return new self(
-            name: $data['name'],
+            name: Arr::get($data, 'name'),
             description: $data['description'],
-            price: new Money((int) $data['price']),
+            price: new Money((int) Arr::get($data, 'price'))
         );
     }
 }
